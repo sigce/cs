@@ -1,0 +1,671 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Computers. Services S.R.L.</title>
+<meta name="author" content="Miguel Rodriguez">
+<meta name="generator" content="WYSIWYG Web Builder 16 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="aicon.png" rel="icon" sizes="60x60" type="image/png">
+<link href="aicon.png" rel="icon" sizes="60x60" type="image/png">
+<link href="aicon.png" rel="icon" sizes="60x60" type="image/png">
+<link href="css/base/jquery-ui.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/cs.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.parallax.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="wb.panel.min.js"></script>
+<script src="util.min.js"></script>
+<script src="scrollspy.min.js"></script>
+<script src="wb.newsviewer.min.js"></script>
+<script src="wwb16.min.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $("a[href*='#welcome']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_welcome').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $('#wb_welcome').parallax();
+      $("a[href*='#acerca']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_acerca').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#LayoutGrid3']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid3').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollLayoutGrid3()
+      {
+         var $obj = $("#wb_LayoutGrid3");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollLayoutGrid3();
+      $(window).scroll(function(event)
+      {
+         onScrollLayoutGrid3();
+      });
+      $("a[href*='#services']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollservices()
+      {
+         var $obj = $("#wb_services");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollservices();
+      $(window).scroll(function(event)
+      {
+         onScrollservices();
+      });
+      $("a[href*='#skillsInner']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_skillsInner').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $("a[href*='#servicesLayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid1').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("#skillsProgressbar1").progressbar(
+      {
+         value: 95
+      });
+      $("#skillsProgressbar2").progressbar(
+      {
+         value: 90
+      });
+      $("#skillsProgressbar3").progressbar(
+      {
+         value: 85
+      });
+      $("#skillsProgressbar4").progressbar(
+      {
+         value: 80
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#LayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid1').offset().top }, 600, 'easeOutQuad');
+      });
+      $("#PanelLayer").panel({animate: true, animationDuration: 500, animationEasing: 'easeOutCubic', dismissible: true, display: 'push', position: 'right'});
+      var NewsFeedTicker1_Data = new Array();
+      NewsFeedTicker1_Data[0] = ["", "1", "", "Software Factory"];
+      NewsFeedTicker1_Data[1] = ["", "2", "", "Data Center Specialists"];
+      NewsFeedTicker1_Data[2] = ["", "3", "", "Software on Demand"];
+      NewsFeedTicker1_Data[3] = ["", "4", "", "Data Center Specialists"];
+      $("#NewsFeedTicker1").newsviewer({ mode: 'rotate', pause: 5000, pause: 5000, animation: 4, animationDuration: 300, sortOrder: 0, dataSource: 'local', param: NewsFeedTicker1_Data, target: '_self', includeDate: false, maxItems: 10});
+      $("#RollOverLayer3").click(function(e)
+      {
+         if (!$(this).hasClass('active'))
+         {
+            $(this).addClass('active');
+            $('.default, .hover', this).removeClass('animate reverse').width();
+            $('.default, .hover', this).addClass('animate');
+         }
+         else
+         {
+            $(this).removeClass('active');
+            $('.default, .hover', this).removeClass('animate').width();
+            $('.default, .hover', this).addClass('animate reverse');
+         }
+      });
+      $("a[href*='#pro']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_pro').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollpro()
+      {
+         var $obj = $("#wb_pro");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollpro();
+      $(window).scroll(function(event)
+      {
+         onScrollpro();
+      });
+      $("a[href*='#contact']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $('#wb_contact').parallax();
+      $("#RollOverLayer1").click(function(e)
+      {
+         if (!$(this).hasClass('active'))
+         {
+            $(this).addClass('active');
+            $('.default, .hover', this).removeClass('animate reverse').width();
+            $('.default, .hover', this).addClass('animate');
+         }
+         else
+         {
+            $(this).removeClass('active');
+            $('.default, .hover', this).removeClass('animate').width();
+            $('.default, .hover', this).addClass('animate reverse');
+         }
+      });
+      $("#RollOverLayer2").click(function(e)
+      {
+         if (!$(this).hasClass('active'))
+         {
+            $(this).addClass('active');
+            $('.default, .hover', this).removeClass('animate reverse').width();
+            $('.default, .hover', this).addClass('animate');
+         }
+         else
+         {
+            $(this).removeClass('active');
+            $('.default, .hover', this).removeClass('animate').width();
+            $('.default, .hover', this).addClass('animate reverse');
+         }
+      });
+      var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+      if (iOS)
+      {
+         $('#wb_welcome,#wb_contact').css('background-attachment', 'scroll');
+      }
+      if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {$('#preloader').remove();}
+   });
+   $(window).on('load', function()
+   {
+      $('#preloader').remove();
+   });
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      var $progressbars = $('.ui-progressbar');
+      
+      $progressbars.each(function() 
+      {
+        var $obj = $(this);
+        $obj.data('value', $obj.progressbar('option', 'value'));
+        $obj.data('done', false);
+        $obj.progressbar('option', 'value', 0);
+      });
+      $(window).bind('scroll', function() 
+      {
+         $progressbars.each(function() 
+         {
+            var $obj = $(this);
+            if (!$obj.data('done') && $(window).scrollTop() + $(window).height() >= $obj.offset().top) 
+            {
+               $obj.data('done', true);
+               $obj.animate({scroll: 1}, 
+               { 
+                  duration: 3000, 
+                  step: function(now) 
+                  {
+                     var $obj = $(this);
+                     var val = Math.round($obj.data('value') * now);
+                     $obj.progressbar('option', 'value', val);
+                  }
+               });
+            }
+         });
+      }).triggerHandler('scroll');
+   });
+</script><script src="js/particles.min.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#welcome').prepend('<div id="particles1"></div>');
+    
+    particlesJS("particles1",{"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#728cff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.22885281607335908,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#9dafff","opacity":0.3472249623182,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+   });
+</script>
+</head>
+<body data-spy="scroll">
+   <div id="wb_welcome">
+      <div id="welcome-overlay"></div>
+      <div id="welcome">
+         <div class="col-1">
+            <div id="wb_Image1">
+               <img src="logo.webp" id="Image1" alt="">
+            </div>
+            <div id="wb_LayoutGrid2">
+               <div id="LayoutGrid2">
+                  <div class="row">
+                     <div class="col-1">
+                        <div id="wb_Text1" data-10-bottom-top="filter:blur(0px);" data-top-bottom="filter:blur(0px);">
+                           <p style="color:#FFFFFF;">Technology</p>
+                        </div>
+                        <div id="wb_Text2">
+                           <span style="color:#FFFFFF;">Siempre a la vanguardia tecnológica</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="NewsFeedTicker1">
+            </div>
+            <div id="wb_Image2">
+               <a href="#acerca"><img src="images/scroll-down_.gif" id="Image2" alt=""></a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_acerca">
+      <div id="acerca">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_skillsInner">
+                     <div id="skillsInner">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_skillsHeading">
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-size:16px;line-height:18px;font-weight:bold;color:#4E4E4E;"><span style="font-size:24px;line-height:27.5px;">NUESTROS PILARES</span></p>
+                                 </div>
+                                 <label for="" id="skillsLabel1">Software Factory Más de 800 mil horas de desarrollo</label>
+                                 <div id="skillsProgressbar1">
+                                 </div>
+                                 <label for="" id="skillsLabel2">Software on Demand Más de 600 mil horas de desarrollo</label>
+                                 <div id="skillsProgressbar2">
+                                 </div>
+                                 <label for="" id="skillsLabel3">Software on Demand Más de 600 mil horas de desarrollo</label>
+                                 <div id="skillsProgressbar3">
+                                 </div>
+                                 <label for="" id="skillsLabel4">Software on Demand Más de 600 mil horas de desarrollo</label>
+                                 <div id="skillsProgressbar4">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_skillsText">
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-size:24px;line-height:27.5px;font-weight:bold;color:#4E4E4E;">ACERCA DE</p>
+                                    <p style="font-size:16px;line-height:18px;line-height:21.6px;">&nbsp;</p>
+                                    <p style="font-size:16px;line-height:18px;color:#4E4E4E;line-height:21.6px;">Somos Computers Services S.R.L., una empresa paraguaya que brinda servicios de Tecnología de Información y Comunicaciones, formada por profesionales comprometidos con el desarrollo del país y con más de 14 años de experiencia en el ámbito de las TICs y áreas conexas.</p>
+                                    <p style="font-size:16px;line-height:18px;line-height:21.6px;">&nbsp;</p>
+                                    <p style="font-size:16px;line-height:18px;color:#4E4E4E;line-height:21.6px;">Simplificamos el trabajo de nuestros clientes buscando las mejores alternativas, tanto en rendimiento como en costos de inversión.</p>
+                                    <p style="font-size:16px;line-height:18px;line-height:21.6px;">&nbsp;</p>
+                                    <p style="font-size:16px;line-height:18px;font-weight:bold;color:#4E4E4E;line-height:21.6px;"><span style="font-weight:normal;">Para nosotros la utilización de las tecnologías está enfocada al desarrollo de soluciones de gestión de información y comunicaciones para empresas, siempre acordes a los requerimientos y necesidades, cuidando en todo momento los costos y la calidad de los servicios, para proteger la inversión de nuestros clientes.</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid3">
+      <div id="LayoutGrid3-divider-bottom">
+         <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1440 320">
+            <path class="divider-fill" d="M0,0L0,256L42.4,256L42.4,256L84.7,256L84.7,0L127.1,0L127.1,96L169.4,96L169.4,224L211.8,224L211.8,224L254.1,224L254.1,128L296.5,128L296.5,32L338.8,32L338.8,160L381.2,160L381.2,128L423.5,128L423.5,192L465.9,192L465.9,256L508.2,256L508.2,288L550.6,288L550.6,64L592.9,64L592.9,192L635.3,192L635.3,128L677.6,128L677.6,64L720,64L720,128L762.4,128L762.4,224L804.7,224L804.7,160L847.1,160L847.1,192L889.4,192L889.4,256L931.8,256L931.8,32L974.1,32L974.1,64L1016.5,64L1016.5,288L1058.8,288L1058.8,256L1101.2,256L1101.2,128L1143.5,128L1143.5,160L1185.9,160L1185.9,64L1228.2,64L1228.2,160L1270.6,160L1270.6,288L1312.9,288L1312.9,224L1355.3,224L1355.3,128L1397.6,128L1397.6,192L1440,192L1440,320L1397.6,320L1397.6,320L1355.3,320L1355.3,320L1312.9,320L1312.9,320L1270.6,320L1270.6,320L1228.2,320L1228.2,320L1185.9,320L1185.9,320L1143.5,320L1143.5,320L1101.2,320L1101.2,320L1058.8,320L1058.8,320L1016.5,320L1016.5,320L974.1,320L974.1,320L931.8,320L931.8,320L889.4,320L889.4,320L847.1,320L847.1,320L804.7,320L804.7,320L762.4,320L762.4,320L720,320L720,320L677.6,320L677.6,320L635.3,320L635.3,320L592.9,320L592.9,320L550.6,320L550.6,320L508.2,320L508.2,320L465.9,320L465.9,320L423.5,320L423.5,320L381.2,320L381.2,320L338.8,320L338.8,320L296.5,320L296.5,320L254.1,320L254.1,320L211.8,320L211.8,320L169.4,320L169.4,320L127.1,320L127.1,320L84.7,320L84.7,320L42.4,320L42.4,320L0,320L0,320Z">
+         </svg></div>
+      <div id="LayoutGrid3">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_Heading3">
+                     <h1 id="Heading3">PRODUCTO</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_va">
+      <div id="va-overlay"></div>
+      <div id="va">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="RollOverLayer1">
+                     <div class="hover">
+                        <div id="wb_Card3">
+                           <div id="Card3-card-body">
+                              <div id="Card3-card-item0">SIGCE</div>
+                              <hr id="Card3-card-item1">
+                              <div id="Card3-card-item2">Sistema Integrado de Gestión y Control Empresarial (SIGCE). Es un software multiplataforma, accesible y fácil de usar, desarrollado especialmente para optimizar las operaciones de las pequeñas, medianas y grandes empresas.</div>
+                              <hr id="Card3-card-item3">
+                              <div id="Card3-card-item4"><i class="fa fa-whatsapp"></i></div>
+                              <div id="Card3-card-item5"><i class="fa fa-instagram"></i></div>
+                              <div id="Card3-card-item6"><i class="fa fa-facebook"></i></div>
+                              <div id="Card3-card-item7"><i class="fa fa-undo"></i>Haga clic aquí para rotar hacia atrás</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="default">
+                        <div id="wb_Card2">
+                           <div id="Card2-card-body">
+                              <img id="Card2-card-item0" src="sigce-min.webp" alt="" title="">
+                              <div id="Card2-card-item1">SIGCE</div>
+                              <div id="Card2-card-item2"><i class="fa fa-undo"></i>Haga clic aquí para rotar</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="RollOverLayer2">
+                     <div class="hover">
+                        <div id="wb_Card5">
+                           <div id="Card5-card-body">
+                              <div id="Card5-card-item0">SIAGRO</div>
+                              <hr id="Card5-card-item1">
+                              <div id="Card5-card-item2">Sistema Integrado de Gestión y Control Empresarial (SIGCE). Es un software multiplataforma, accesible y fácil de usar, desarrollado especialmente para optimizar las operaciones de las pequeñas, medianas y grandes empresas.</div>
+                              <hr id="Card5-card-item3">
+                              <div id="Card5-card-item4"><i class="fa fa-whatsapp"></i></div>
+                              <div id="Card5-card-item5"><i class="fa fa-instagram"></i></div>
+                              <div id="Card5-card-item6"><i class="fa fa-facebook"></i></div>
+                              <div id="Card5-card-item7"><i class="fa fa-undo"></i>Haga clic aquí para rotar hacia atrás</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="default">
+                        <div id="wb_Card4">
+                           <div id="Card4-card-body">
+                              <img id="Card4-card-item0" src="siagro-min.webp" alt="" title="">
+                              <div id="Card4-card-item1">SIAGRO</div>
+                              <div id="Card4-card-item2"><i class="fa fa-undo"></i>Haga clic aquí para rotar</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="RollOverLayer3">
+                     <div class="hover">
+                        <div id="wb_Card16">
+                           <div id="Card16-card-body">
+                              <div id="Card16-card-item0">PHARO</div>
+                              <hr id="Card16-card-item1">
+                              <div id="Card16-card-item2">Sistema Integrado de Gestión y Control Empresarial (SIGCE). Es un software multiplataforma, accesible y fácil de usar, desarrollado especialmente para optimizar las operaciones de las pequeñas, medianas y grandes empresas.</div>
+                              <hr id="Card16-card-item3">
+                              <div id="Card16-card-item4"><i class="fa fa-whatsapp"></i></div>
+                              <div id="Card16-card-item5"><i class="fa fa-instagram"></i></div>
+                              <div id="Card16-card-item6"><i class="fa fa-facebook"></i></div>
+                              <div id="Card16-card-item7"><i class="fa fa-undo"></i>Haga clic aquí para rotar hacia atrás</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="default">
+                        <div id="wb_Card15">
+                           <div id="Card15-card-body">
+                              <img id="Card15-card-item0" src="Pharo-min.webp" alt="" title="">
+                              <div id="Card15-card-item1">PHARO</div>
+                              <div id="Card15-card-item2"><i class="fa fa-undo"></i>Haga clic aquí para rotar</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_services">
+      <div id="services">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesHeading">
+                     <h1 id="servicesHeading">SERVICIOS</h1>
+                  </div>
+                  <div id="wb_Text4">
+                     <span style="color:#FFFFFF;font-family:Arial;font-size:20px;">Infraestructura lógica y física para Centro de Datos. Soporte técnico certificado en servidores, networking, energía y enfriamiento.<br><br>Trabajamos con las marcas de mayor confiabilidad y garantía nacional e internacional.</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="upStickyLayer">
+      <div id="upStickyLayer_Container">
+         <div id="wb_up-arrow">
+            <a href="https://wa.me/595983452060" target="_blank"><div id="up-arrow"><i class="fa fa-whatsapp"></i></div></a></div>
+      </div>
+   </div>
+   <div id="wb_servicesLayoutGrid1">
+      <div id="servicesLayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesCard1" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard1-card-body">
+                        <div id="servicesCard1-card-item0"><i class="fa fa-sitemap"></i></div>
+                        <div id="servicesCard1-card-item1">Redes de Datos</div>
+                        <div id="servicesCard1-card-item2">Diseño y arquitectura de redes de datos, telefónicas y eléctricas. Análisis de viabilidad tecnológica e implementación de soluciones en la medida de las...</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_servicesCard2" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard2-card-body">
+                        <div id="servicesCard2-card-item0"><i class="fa fa-bolt"></i></div>
+                        <div id="servicesCard2-card-item1">Seguridad Eléctrica</div>
+                        <div id="servicesCard2-card-item2">Somos Centro Autorizado de Servicios para Sistemas de UPS DELTA con certificación MCIS (Mission Critical Infraestructure Solutions). Contamos con...</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_servicesCard3" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard3-card-body">
+                        <div id="servicesCard3-card-item0"><i class="fa fa-server"></i></div>
+                        <div id="servicesCard3-card-item1">Seguridad Perimetral</div>
+                        <div id="servicesCard3-card-item2">Cámaras y videovigilancia CCTV. Alarmas de intrusión, puertas de segurad, Sistema contra incendios.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-4">
+               <div class="col-4-padding">
+                  <div id="wb_Card1" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="Card1-card-body">
+                        <div id="Card1-card-item0"><i class="fa fa-code"></i></div>
+                        <div id="Card1-card-item1">Leasing</div>
+                        <div id="Card1-card-item2">Provisión de equipos de impresión y consumibles en la modalidad de leasing, además del soporte técnico post venta.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid1">
+      <div id="LayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_IconFont1">
+                  <a href="https://www.facebook.com/computersservicessrl/" target="_blank"><div id="IconFont1"><i class="fa fa-facebook"></i></div></a>
+               </div>
+               <div id="wb_IconFont2">
+                  <a href="https://wa.me/595983452060" target="_blank"><div id="IconFont2"><i class="fa fa-whatsapp"></i></div></a>
+               </div>
+               <div id="wb_IconFont3">
+                  <a href="https://goo.gl/maps/qTR6Do6iTco17ycP6" target="_blank"><div id="IconFont3"><i class="fa fa-location-arrow"></i></div></a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_Heading2">
+                  <h1 id="Heading2">Computers Services S.R.L.</h1>
+               </div>
+               <div id="wb_PanelMenu2">
+                  <a href="#PanelLayer" id="PanelMenu2">
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     <span class="line"></span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="PanelLayer">
+      <div id="wb_CssMenu1">
+         <ul id="CssMenu1" role="menubar" class="nav">
+            <li class="nav-item firstmain"><a role="menuitem" class="nav-link" href="#welcome" target="_self"><i class="fa fa-home">&nbsp;</i>INICIO</a>
+            </li>
+            <li class="nav-item"><a role="menuitem" class="nav-link" href="#acerca" target="_self"><i class="fa fa-info-circle">&nbsp;</i>ACERCA&nbsp;</a>
+            </li>
+            <li class="nav-item"><a role="menuitem" class="nav-link" href="#services" target="_self"><i class="fa fa-lightbulb-o">&nbsp;</i>SERVICIOS</a>
+            </li>
+            <li class="nav-item"><a role="menuitem" class="nav-link" href="#pro" target="_self"><i class="fa fa-product-hunt">&nbsp;</i>PRODUCTO</a>
+            </li>
+            <li class="nav-item"><a role="menuitem" class="nav-link" href="#contact" target="_self"><i class="fa fa-envelope">&nbsp;</i>CONTACTOS</a>
+            </li>
+         </ul>
+      </div>
+      <div id="wb_Card9">
+         <div id="Card9-card-body">
+            <div id="Card9-card-item0"><a href="https://www.facebook.com/computersservicessrl/" target="_blank"><i class="fa fa-facebook"></i></a></div>
+            <div id="Card9-card-item1"><a href="https://wa.me/595983452060" target="_blank"><i class="fa fa-whatsapp"></i></a></div>
+            <div id="Card9-card-item2"><a href="https://goo.gl/maps/qTR6Do6iTco17ycP6" target="_blank"><i class="fa fa-location-arrow"></i></a></div>
+            <div id="Card9-card-item3"><a href="https://github.com/sigce" target="_blank"><i class="fa fa-github"></i></a></div>
+         </div>
+      </div>
+      <div id="wb_Text3">
+         <span style="color:#A5A5A5;font-family:Arial;font-size:16px;">Computers. Services S.R.L. ©</span>
+      </div>
+   </div>
+
+   <div id="wb_pro">
+      <div id="pro">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Image3">
+                  <img src="images/3.png" id="Image3" alt="">
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_Image5">
+                     <img src="images/1.png" id="Image5" alt="">
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_Image6">
+                  <img src="images/2.png" id="Image6" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact-overlay"></div>
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_contactForm">
+                     <form name="contactForm" method="get" action="mailto:orleugim@gmail.com" enctype="text/plain" id="contactForm">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_Image4">
+                                    <img src="images/CS.png" id="Image4" alt="">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_contactText2">
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-size:16px;line-height:18px;color:#4E4E4E;"><span style="font-size:19px;line-height:21px;font-weight:bold;">INFORMACIÓN DE CONTACTO</span></p>
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-size:16px;line-height:18px;color:#4E4E4E;">Si aún no eres cliente, te queremos dar razones para que empieces a serlo.</p>
+                                 </div>
+                                 <div id="wb_Breadcrumb1">
+                                    <ul id="Breadcrumb1">
+                                       <li><a href="tel:+59521522346"><i class="fa fa-phone">&nbsp;</i>+595 21 522 346</a></li>
+                                    </ul>
+                                 </div>
+                                 <div id="wb_Breadcrumb4">
+                                    <ul id="Breadcrumb4">
+                                       <li><a href="tel:+595983452060"><i class="fa fa-phone">&nbsp;</i>+595 983 452 060</a></li>
+                                    </ul>
+                                 </div>
+                                 <div id="wb_Breadcrumb5">
+                                    <ul id="Breadcrumb5">
+                                       <li><a href="tel:+595 21 522 346"><i class="fa fa-fax">&nbsp;</i>+595 21 522 346</a></li>
+                                    </ul>
+                                 </div>
+                                 <div id="wb_Breadcrumb2">
+                                    <ul id="Breadcrumb2">
+                                       <li><a href="mailto:info@computersservices.com.py"><i class="fa fa-envelope-o">&nbsp;</i>info@computersservices.com.py</a></li>
+                                    </ul>
+                                 </div>
+                                 <div id="wb_Breadcrumb3">
+                                    <ul id="Breadcrumb3">
+                                       <li><a href="https://goo.gl/maps/pDGqZiEFESWahunMA" target="_blank"><i class="fa fa-map-marker">&nbsp;</i>San Lorenzo - Paraguay</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactText3">
+                  <p style="color:#FFFFFF;">Computers. Services S.R.L. © 2021. Todos los derechos reservados</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="preloader"></div>
+</body>
+</html>
